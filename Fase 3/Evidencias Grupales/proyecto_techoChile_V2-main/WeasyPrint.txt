@@ -1,0 +1,26 @@
+Generación de PDFs con xhtml2pdf
+==================================
+
+El sistema ahora usa xhtml2pdf en lugar de WeasyPrint para generar reportes PDF.
+xhtml2pdf es 100% compatible con Windows y no requiere dependencias externas.
+
+Instalación:
+-----------
+pip install xhtml2pdf
+
+Ventajas de xhtml2pdf:
+----------------------
+1. Funciona en Windows sin dependencias externas
+2. No requiere GTK, Cairo o librerías nativas
+3. Instalación simple con pip
+4. Compatible con HTML y CSS básico
+5. Genera PDFs de calidad profesional
+
+Uso en el proyecto:
+-------------------
+- Dashboard PDF: core/views_dashboard_pdf.py
+- Actas de recepción: reportes/views.py
+- Fichas postventa: ficha_postventa/views.py
+
+Todos los reportes mantienen el mismo formato visual pero ahora se generan
+con xhtml2pdf para compatibilidad total con Windows.
